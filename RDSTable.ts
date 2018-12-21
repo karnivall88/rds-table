@@ -34,23 +34,28 @@ namespace rds
             this.rdsEnabled = enabled;
             this.rdsTable = table;
             this.count = count;
-            this.rdsPostResultEvaluation = new Event('heh');
-            this.rdsHit = new Event('heh');
-            this.rdsPreResultEvaluation = new Event('heh');
-
+            this.rdsPostResultEvaluation = new Event('OnRDSPreResultEvaluation');
+            this.rdsHit = new Event('OnRdsHit');
+            this.rdsPreResultEvaluation = new Event('OnrdsPreResultEvaluation');
         }
-        OnRDSPreResultEvaluation(e: any): void {
+ 
+        private mcontents:IRDSObject[] = [];
+
+        get rdsCount(){return this.count;}
+        set rdsCount(count:number){this.count = count;}
+
+        OnRDSPreResultEvaluation(e: Event): void {
           throw new Error("Method not implemented.");
             
         }
-        OnRDSHit(e: any): void {
+        OnRDSHit(e: Event): void {
             throw new Error("Method not implemented.");
         }
-        OnRDSPostResultEvaluation(e: any): void {
+        OnRDSPostResultEvaluation(e: Event): void {
             throw new Error("Method not implemented.");
         }
 
- 
+        
        
     }
 

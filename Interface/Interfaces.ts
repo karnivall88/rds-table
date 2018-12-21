@@ -15,9 +15,9 @@ export interface IRDSObject
    rdsPreResultEvaluation:Event;
    rdsHit:Event;
    rdsPostResultEvaluation:Event;
-   OnRDSPreResultEvaluation(e:any):void;
-   OnRDSHit(e:any):void;
-   OnRDSPostResultEvaluation (e:any):void;
+   OnRDSPreResultEvaluation(e:Event):void;
+   OnRDSHit(e:Event):void;
+   OnRDSPostResultEvaluation (e:Event):void;
 }
 export interface IRDSTable extends IRDSObject
 {
