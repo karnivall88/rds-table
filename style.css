@@ -1,0 +1,12 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #d4d4d4;
+}
+.test{
+    display: none;
+    background-color: black;
+    height: 150px;
+    opacity: 0;
+    transition: .8s;
+}
